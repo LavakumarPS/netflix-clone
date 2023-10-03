@@ -1,9 +1,11 @@
 
 import Body from './componentss/Body';
-
 function App() {
   return (
-    <Body />
+    <div>
+    <Body/>
+    
+    </div>
   );
 }
 
