@@ -82,10 +82,10 @@ signInWithEmailAndPassword(auth, email.current.value, password.current.value)
         <form onSubmit={(e)=>e.preventDefault()} className="w-1/4 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white align-middle rounded-md bg-opacity-80">
           <h1 className="font-bold text-xl p-2 m-2">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
           {!isSignInForm &&
-            <input className="m-2 py-2 w-full  bg-gray-800"   type="text" placeholder="Full Name"></input>
+            <input className="m-2 py-2 w-full  bg-gray-800 cursor-text"   type="text" placeholder="Full Name"></input>
           }
-          <input className="m-2 py-2 w-full  bg-gray-800" ref={email} type="text" placeholder="Email or Phone number"></input>
-          <input className="m-2 py-2 w-full  bg-gray-800" ref={password} type="password" placeholder="Password"></input>
+          <input className="m-2 py-2 w-full  bg-gray-800 cursor-text focus:ring-red-500" ref={email} type="text" placeholder="Email or Phone number"></input>
+          <input className="m-2 py-2 w-full  bg-gray-800 cursor-text" ref={password} type="password" placeholder="Password"></input>
           <p className="text-red-500 font-bold">{errorMessage}</p>
           <button className="p-2 m-2 bg-red-700 w-full rounded-lg" type="submit" onClick={handleButtonClick}>{isSignInForm ? "Sign In" : "Sign Up"}</button>
           <p className="p-2 m-4 cursor-pointer" onClick={toggleSignUpForm}>{isSignInForm ? "New to Netflix ? Sign Up" : "Already a user? Sign In"}</p>
