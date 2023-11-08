@@ -5,7 +5,7 @@ const SecondaryContainer = () => {
 
     const movies = useSelector((store) => store?.movies);
     if(!movies)return;
-    console.log(movies);
+   
 
     return(
         movies.nowPlayingMovies && (
