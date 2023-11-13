@@ -5,8 +5,21 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWQ5ZmY5Mzg3MTMxOGYzMDUwYjNlMmFiYTJiYWY5YyIsInN1YiI6IjY1MzI1Y2I5ZWZlMzdjMDEzYjQ1ZTFkOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.XnMVCJEvcdVPyRH4tkbocX9vaqzFrjW7O0LwYob9WMw'
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ODQyNTE5MmZjZDM3YjJhODM5NmY3YTFlZjkzNDc4YiIsInN1YiI6IjY1MzI1Y2I5ZWZlMzdjMDEzYjQ1ZTFkOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5SLdb792nI7Sw3L61alp4CNxDzs4btejfd8sngaVlPI'
     },
   };
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w780";
   export const SUPPORTED_LANGUAGES = [{identifier : "en", name : "English"}, {identifier : "telugu", name : "Telugu"}, {identifier : "tamil", name : "Tamil"}];
+  export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY
+
+
+
+
+
+
+
+
+
+
+
+
