@@ -77,10 +77,10 @@ signInWithEmailAndPassword(auth, email.current.value, password.current.value)
       <div>
         <Header/>
         <div className="absolute">
-       <img src={BACKGROUND_IMG} alt="bg"></img>
+       <img className="h-screen object-cover md:w-screen" src={BACKGROUND_IMG} alt="bg"></img>
       </div>
-        <form onSubmit={(e)=>e.preventDefault()} className="w-1/4 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white align-middle rounded-md bg-opacity-80">
-          <h1 className="font-bold text-xl p-2 m-2">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
+        <form onSubmit={(e)=>e.preventDefault()} className="w-full md:w-1/4 absolute p-12 bg-black my-36 mx-auto right-0 left-0 text-white align-middle rounded-md bg-opacity-80">
+          <h1 className="font-bold text-md md:font-bold text-xl p-2 m-2">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
           {!isSignInForm &&
             <input className="m-2 py-2 w-full  bg-gray-800 cursor-text"   type="text" placeholder="Full Name"></input>
           }
