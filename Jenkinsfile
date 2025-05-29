@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Checkout'){
             steps{
-                git 'https://github.com/LavakumarPS/netflix-clone.git'
+                git branch: 'main', url:'https://github.com/LavakumarPS/netflix-clone.git'
             }
         }
          stage('Install Dependencies'){
