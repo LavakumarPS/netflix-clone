@@ -6,7 +6,7 @@ pipeline{
                 git 'https://github.com/LavakumarPS/netflix-clone.git'
             }
         }
-         stage('Installing Dependencies'){
+         stage('Install Dependencies'){
             steps{
                 sh 'npm install'
             }
