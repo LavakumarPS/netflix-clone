@@ -4,6 +4,7 @@ pipeline{
         stage('Checkout'){
             steps{
                 git branch: 'main', url:'https://github.com/LavakumarPS/netflix-clone.git'
+                sh 'echo "Checkout Stage is Success"'
             }
         }
          stage('Install Dependencies'){
