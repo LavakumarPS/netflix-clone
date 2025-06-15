@@ -1,3 +1,4 @@
+name: "Hello World Job"
 on:
   push: 
     branches: 
