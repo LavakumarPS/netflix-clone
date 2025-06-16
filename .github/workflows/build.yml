@@ -1,12 +1,17 @@
 name: "Hello World Job"
 on:
   push: 
-    branches: 
-      - main
+    branches: [ main ]
+  workflow_dispatch: 
+    inputs:
+     name: 
+      description: " Enter Your Name"
+      default: "World"
+      required: true
 jobs:
   hello_world: 
     runs-on: ubuntu-latest
     steps: 
       - name: "Prints Basic Info"
-        run: echo "Hello World"
+        run: echo "Hello ${{ github.event.inputs.name }}"
 
