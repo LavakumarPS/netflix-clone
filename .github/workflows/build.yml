@@ -1,17 +1,26 @@
-name: "Hello World Job"
+name: "Build Job"
 on:
   push: 
     branches: [ main ]
-  workflow_dispatch: 
-    inputs:
-     name: 
-      description: 'Enter Your Name'
-      default: 'World'
-      required: true
+  workflow_dispatch:  
 jobs:
-  hello_world: 
+  build: 
     runs-on: ubuntu-latest
     steps: 
-      - name: "Prints Basic Info"
-        run: echo "Hello ${{ github.event.inputs.name }}"
+      - name: "Checkout code"
+        uses: actions/checkout@4
+      - name: "Setup NodeJs"
+        uses: actions/setup-node@v4
+        with:
+         node-version: '18'
+      - name: "Install Dependencies"
+        run: npm install
+      - name: "Run Tests"
+        run: npm run test 
+      - name: "Run liniting"
+        run: npm run lint
+      - name: "Build the application"
+        run: npm run build
+      - name: "Final Step"
+        run: echo "All steps are passed"
 
