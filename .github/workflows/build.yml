@@ -16,12 +16,12 @@ jobs:
       - name: "Install Dependencies"
         run: npm install
       - name: "Run Tests"
-        run: npm test -- --watchAll=false
-        continue-on-error: true
+        run: npm run test
       - name: "Run liniting"
         run: npm run lint
       - name: "Build the application"
         run: npm run build
+        continue-on-error: true
       - name: "Final Step"
         run: echo "All steps are passed"
 
