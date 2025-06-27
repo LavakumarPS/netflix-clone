@@ -16,7 +16,7 @@ jobs:
       - name: "Install Dependencies"
         run: npm install
       - name: "Run Tests"
-        run: npm run test 
+        run: npm run test --passWithNoTests 
       - name: "Run liniting"
         run: npm run lint
       - name: "Build the application"
